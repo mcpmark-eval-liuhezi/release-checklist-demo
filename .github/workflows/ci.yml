@@ -1,0 +1,12 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo CI line
+        run: echo "CI is running on ${{ github.event_name }} for ${{ github.ref }}"
